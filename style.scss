@@ -1,0 +1,54 @@
+//config
+
+//colors
+
+$primary--dark--cyan: hsl(185, 75%, 39%);
+$primary--verydark--blue : hsl(229, 23%, 23%);
+$primary--darkgrey--blue: hsl(227, 10%, 46%);
+$neutral--grey: hsl(0, 0%, 59%);
+
+$primary--font: 'Kumbh Sans', sans-serif;
+
+$bp:(
+mobile: 480px,// done
+tablet: 768px,//done
+tablet-land: 800px,
+desktop: 1200px,
+large-desktop:1400px
+);
+
+@mixin query($screen){
+ @each $key, $value in $bp {
+   @if($screen == $key){
+     @media (min-width:$value){
+      @content;
+    }
+  }
+}
+}
+
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-size:62.5%;
+  background-color: $primary--dark--cyan;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+h2{
+  font-size: 2rem
+}
+h3{font-size: 1.8rem}
+h4{font-size: 1.6rem}
+p{
+  font-size: 1.4rem
+}
+
+.card-container{
+
+}
