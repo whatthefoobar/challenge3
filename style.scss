@@ -34,7 +34,10 @@ large-desktop:1400px
 }
 body{
   font-size:62.5%;
+  font-family: $primary--font;
   background-color: $primary--dark--cyan;
+  background: url("../images/bg-pattern-top.svg") no-repeat, url("../images/bg-pattern-bottom.svg") no-repeat, linear-gradient($primary--dark--cyan, $primary--dark--cyan);
+  background-position: right 52vw bottom 38vh, left 48vw top 52vh;
 }
 
 h1{
@@ -44,11 +47,65 @@ h2{
   font-size: 2rem
 }
 h3{font-size: 1.8rem}
-h4{font-size: 1.6rem}
+h4{font-size: 1.2rem}
+
 p{
-  font-size: 1.4rem
+  font-size: 1rem;
+  font-weight: 200;
+  color: $neutral--grey;
 }
 
 .card-container{
+ max-width: 1200px;
+ width: 85%;
+ margin: 20vh auto;
+//  border: 2px solid red;
+}
+.card{
+  margin: 0 auto;
+  max-width:350px; 
+  height: 400px;
+  padding: 5rem 0;
+  text-align: center;
+  border-radius: 15px;
+  background-image: 
+    linear-gradient(to bottom, transparent 0 140px, white 0 100%),
+    url("../images/bg-pattern-card.svg");
+  background-position: top;
+
+  .card__details{
+    img{
+      border-radius: 50%;
+      // margin: 5px;
+      border: 7px solid white;
+      background-color: white;// fixes leftover green border
+      margin-bottom: 50px;
+    }
+    .card__user-detail{
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+
+  .separator{
+    height: 2px;
+    width: 100%;
+    background-color:$neutral--grey;
+    display: block;
+    
+  }
+  .card__stats{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+
+    span{
+ font-size: 0.8rem;
+ color: $neutral--grey;
+ font-weight: 300;
+    }
+  }
 
 }
