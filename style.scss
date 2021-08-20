@@ -9,9 +9,10 @@ $neutral--grey: hsl(0, 0%, 59%);
 
 $primary--font: 'Kumbh Sans', sans-serif;
 
+//ended up not using media queries
 $bp:(
-mobile: 480px,// done
-tablet: 768px,//done
+mobile: 480px,
+tablet: 768px,
 tablet-land: 800px,
 desktop: 1200px,
 large-desktop:1400px
@@ -73,24 +74,33 @@ p{
     url("../images/bg-pattern-card.svg");
   background-position: top;
 
-  .card__details{
-    img{
+
+  &__details{
+    &--img {
       border-radius: 50%;
-      // margin: 5px;
       border: 7px solid white;
       background-color: white;// fixes leftover green border
-      margin-bottom: 50px;
+      margin-bottom: 20px;
     }
-    .card__user-detail{
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
+    
   }
 
+  &__user--details{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    color: $primary--verydark--blue;
+  }
+
+  .lighter{
+    color: $neutral--grey;
+    font-weight: 300;
+   }
+
   .separator{
-    height: 2px;
+    height: 1px;
     width: 100%;
-    background-color:$neutral--grey;
+    background-color:lighten($neutral--grey, 20%);
     display: block;
     
   }
@@ -98,13 +108,14 @@ p{
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 2rem;
+    color: $primary--verydark--blue;
     
 
-    span{
- font-size: 0.8rem;
- color: $neutral--grey;
- font-weight: 300;
+    .card__stats--span{
+     font-size: 0.9rem;
+     color: $neutral--grey;
+     font-weight: 300;
     }
   }
 

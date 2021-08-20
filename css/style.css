@@ -53,22 +53,29 @@ p {
   background-position: top;
 }
 
-.card .card__details img {
+.card__details--img {
   border-radius: 50%;
   border: 7px solid white;
   background-color: white;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.card .card__details .card__user-detail {
+.card__user--details {
   font-size: 1.2rem;
   font-weight: 700;
+  padding-bottom: 2rem;
+  color: #2d3248;
+}
+
+.card .lighter {
+  color: #969696;
+  font-weight: 300;
 }
 
 .card .separator {
-  height: 2px;
+  height: 1px;
   width: 100%;
-  background-color: #969696;
+  background-color: #c9c9c9;
   display: block;
 }
 
@@ -80,11 +87,12 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 15px;
+  gap: 2rem;
+  color: #2d3248;
 }
 
-.card .card__stats span {
-  font-size: 0.8rem;
+.card .card__stats .card__stats--span {
+  font-size: 0.9rem;
   color: #969696;
   font-weight: 300;
 }
